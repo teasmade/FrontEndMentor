@@ -1,12 +1,64 @@
 body {
-    background-color: red;
+  background-color: lightgoldenrodyellow;
 }
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+  font-size: 11px;
+  text-align: center;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  background-color: goldenrod;
+}
+
+.headItems {
+  background-color: palegreen;
+  text-align: center;
+  height: 15vh;
+}
+
+.signupForm {
+  background-color:cornflowerblue;
+  height: 40vh;
+  padding: 10px;
+}
+
+.tierForm {
+  height: inherit;
+}
+
+.sliderGroup {
+  background-color: palevioletred;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  height: 30%;
+  padding: 10px;
+}
+
+.sliderItem {
+  border: 2px solid black;
+}
+
+.optionsGroup {
+  background-color: paleturquoise;
+  height: 33%;
+}
+
+.signupGroup {
+  background-color: blanchedalmond;
+  display: flex;
+  height: 33%;
+}
+
+.submit {
+  margin: auto;
+}
