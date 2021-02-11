@@ -28,18 +28,23 @@
       <form action="" class="tierForm">
 
         <div class="sliderGroup">
-          <div class="tierPageviews sliderItem"><span id="viewNumber">123K </span>Pageviews</div>
+          <div class="tierPageviews sliderItem"><span id="viewNumber">123</span>K Pageviews</div>
           <div class="tierPrice sliderItem">$ /month</div>
-          <div class="slider sliderItem">--------------SLIDER------------CONTROL--------------</div>
+          <div class="slider sliderItem">
+            <input type="range" id="priceSlider" name="priceSlider" min="1" max="5" value="3" step="1">
+            <!-- <label for="slider">PRICE</label> -->
+          </div>
         </div>
 
         <div class="optionsGroup">
           <span class="monthly">Monthly Billing</span>
-          <span class="toggle">
-            <input type="checkbox">
-          </span>
+          <label for="optionToggle" class="toggle">
+            <input type="checkbox" class="toggle_input" name="" id="optionToggle">
+            <div class="toggle_fill"></div>
+          </label>
           <span class="yearly">Yearly Billing</span>
-          <span class="discount">-25%</span>
+          <span class="discount"></span>
+          <!-- Need to add in DISCOUNT word in desktop view -->
         </div>
 
         <div class="signupGroup">
@@ -65,6 +70,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/teasmade">teasmade</a>.
   </div>
+
+  <script src="app.js"></script>
 </body>
 
 </html>

@@ -22,7 +22,8 @@ body {
 
 .card {
   width: 95%;
-  max-width: 450px;
+  max-width: 550px;
+  min-width: 300px;
   margin: auto;
   padding: 10px;
   border: 2px solid black;
@@ -74,20 +75,105 @@ body {
   border: 2px solid black;
 }
 
+.slider {
+  width: 100%;
+  text-align: center;
+}
+
+#priceSlider {
+  width: 95%;
+}
+
 .tierPageviews {
   text-transform: uppercase;
 }
 
 .optionsGroup {
-  background-color: paleturquoise;
+  /* background-color: paleturquoise; */
   height: 15%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   font-size: 0.8rem;
 }
+
+.monthly {
+  flex: 6;
+  text-align: right;
+}
+
+.toggle {
+  flex: 0;
+}
+
+.yearly {
+  flex: 3;
+}
+
+.discount {
+  flex: 3;
+  font-weight: 800;
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.discount:before {
+  content: "25% discount";
+}
+
+.toggle {
+  --width: 40px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--height) / 2);
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.toggle_input {
+  display: none;
+}
+
+.toggle_fill {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background: hsl(223, 50%, 87%);
+  transition: background 0.2s;
+}
+
+.toggle_fill::after {
+  content: "";
+  position: absolute;
+  /* new position offset for shrunk inner circle */
+  /* half of remainder from shrinking circle */
+  top: calc(var(--height) * 0.1);
+  left: calc(var(--height) * 0.1);
+  /* top: 0; */
+  /* left: 0; */
+  /* shrink inner circle */
+  height: calc(var(--height) * 0.8);
+  width: calc(var(--height) * 0.8);
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: calc(var(--border-radius) * 0.8);
+  transition: transform 0.2s;
+}
+
+.toggle_input:checked ~ .toggle_fill {
+  background: hsl(174, 86%, 45%);
+}
+
+.toggle_input:checked ~ .toggle_fill::after {
+  transform: translateX(var(--height));
+}
+
 
 .signupGroup {
   /* background-color: blanchedalmond; */
@@ -123,6 +209,11 @@ body {
   border-radius: 1.5em;
 }
 
+
+
+
+
+
 @media (max-width: 375px) {
   body {
     background-color: red;
@@ -138,5 +229,23 @@ body {
 
   .tierPrice {
     order: 3;
+  }
+
+  .discount {
+    flex: 2
+  }
+
+  .yearly {
+    flex: 4;
+  }
+
+  .discount:before {
+    content: "-25%";
+  }
+}
+
+@media (min-width: 376px) {
+  .features ul {
+    text-align: left;
   }
 }

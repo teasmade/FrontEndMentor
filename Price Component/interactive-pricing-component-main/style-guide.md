@@ -19,20 +19,21 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- White (Pricing Component Background): hsl (0, 0%, 100%)
-- Very Pale Blue (Main Background): hsl(230, 100%, 99%)
+<!-- - White (Pricing Component Background): hsl (0, 0%, 100%) -->
+<!-- - Very Pale Blue (Main Background): hsl(230, 100%, 99%) -->
 - Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
 - Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)
-- Grayish Blue (Text): hsl(225, 20%, 60%)
+<!-- - Grayish Blue (Text): hsl(225, 20%, 60%)  -->
 - Dark Desaturated Blue (Text & CTA Background): hsl(227, 35%, 25%)
 
 ## Typography
 
-### Body Copy
+### Body Copy PART DONE
 
 - Font size (Introductory Paragraph): 15px
+<!-- Font size set on body - set other sizes relative? -->
 
-### Font
+### Font DONE
 
 - Family: [Manrope](https://fonts.google.com/specimen/Manrope)
 - Weights: 600, 800
