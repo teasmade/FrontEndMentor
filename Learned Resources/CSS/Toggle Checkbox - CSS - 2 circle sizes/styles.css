@@ -1,0 +1,111 @@
+.wrapper {
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.head {
+    font-size: 1.5em;;
+}
+
+.info {
+    margin-right: 10%;
+}
+
+
+.toggle {
+    /* custom property (-- prefix) for width */
+    --width: 400px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height) / 2);
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle_input {
+    display: none;
+}
+
+.toggle_fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle_fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.toggle_input:checked ~ .toggle_fill {
+    background: #009578;
+}
+
+.toggle_input:checked ~ .toggle_fill::after {
+    transform: translateX(var(--height));
+}
+
+/* STYLES FROM HERE FOR REDUCED INNER CIRCLE TOGGLE */
+
+.toggle2 {
+    /* custom property (-- prefix) for width */
+    --width: 400px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height) / 2);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle_input2 {
+    display: none;
+}
+
+.toggle_fill2 {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle_fill2::after {
+    content: "";
+    position: absolute;
+    /* new position offset for shrunk inner circle */
+    /* half of remainder from shrinking circle */
+    top: calc(var(--height) * 0.1);
+    left: calc(var(--height) * 0.1);
+    /* top: 0; */
+    /* left: 0; */
+    /* shrink inner circle */
+    height: calc(var(--height) * 0.8);
+    width: calc(var(--height) * 0.8);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: calc(var(--border-radius) * 0.8);
+    transition: transform 0.2s;
+}
+
+.toggle_input2:checked ~ .toggle_fill2 {
+    background: #009578;
+}
+
+.toggle_input2:checked ~ .toggle_fill2::after {
+    transform: translateX(var(--height));
+}
+
