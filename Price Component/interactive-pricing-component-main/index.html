@@ -8,58 +8,62 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles\styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Interactive pricing component</title>
 
 </head>
 
 <body>
-<section class="card">
-  <section class="head">
-    <div class="headItems">
-      <h2 id="title">Simple, traffic-based pricing</h2>
-      <span class="strapline">Sign-up for our 30-day trial.</span>
-      <span class="strapline">No credit card required.</span>
-    </div>
-  </section>
-
-  <section class="signupForm">
-    <form action="" class="tierForm">
-
-      <div class="sliderGroup">
-        <div class="tierPageviews sliderItem">Pageviews</div>
-        <div class="tierPrice sliderItem">$ /month</div>
-        <div class="slider sliderItem">--------------SLIDER CONTROL--------------</div>
+  <section class="card">
+    <section class="head">
+      <div class="headItems">
+        <h2 class="title">Simple, traffic-based pricing</h2>
+        <p class="strapline">Sign-up for our 30-day trial.</p>
+        <p class="strapline">No credit card required.</p>
       </div>
+    </section>
 
-      <div class="optionsGroup">
-        <span class="monthly">Monthly Billing</span>
-        <span class="toggle">TOGGLE CONTROL</span>
-        <span class="yearly">Yearly Billing</span>
-        <span class="discount">25% discount</span>
-      </div>
+    <section class="signupForm">
+      <form action="" class="tierForm">
 
-      <div class="signupGroup">
-        <div class="features">
-          <ul>
-            <li>Unlimited websites</li>
-            <li>100% data ownership</li>
-            <li>Email reports</li>
-          </ul>
+        <div class="sliderGroup">
+          <div class="tierPageviews sliderItem"><span id="viewNumber">123K </span>Pageviews</div>
+          <div class="tierPrice sliderItem">$ /month</div>
+          <div class="slider sliderItem">--------------SLIDER------------CONTROL--------------</div>
         </div>
-        <div class="submit">
-          <button>Start my trial</button>
+
+        <div class="optionsGroup">
+          <span class="monthly">Monthly Billing</span>
+          <span class="toggle">
+            <input type="checkbox">
+          </span>
+          <span class="yearly">Yearly Billing</span>
+          <span class="discount">-25%</span>
         </div>
-      </div>
-    </form>
+
+        <div class="signupGroup">
+          <div class="features">
+            <ul>
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+          </div>
+          <div class="submit">
+            <button>Start my trial</button>
+          </div>
+        </div>
+      </form>
+    </section>
   </section>
-</section>
 
 
 
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/teasmade">teasmade</a>.
   </div>
 </body>
 
